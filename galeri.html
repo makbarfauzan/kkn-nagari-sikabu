@@ -1,0 +1,77 @@
+
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri - Nagari Sikabu</title>
+  <link rel="icon" href="assets/logo2.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Logo di atas navigasi -->
+  <div class="logo-atas">
+    <img src="assets/logo1.jpg" alt="Logo KKN Nagari Sikabu" />
+  </div>
+
+    <!-- Header untuk HP -->
+  <header class="mobile-header">
+    <button id="menu-toggle" class="hamburger">&#9776;</button>
+    <span class="menu-label">Menu</span>
+  </header>
+
+  <!-- Menu samping untuk HP -->
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil Nagari</a></li>
+      <li><a href="walinagari.html">Wali Nagari</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu horizontal biasa untuk desktop -->
+<nav class="desktop-nav">
+  <div class="nav-container">
+    <div class="brand">Nagari Sikabu</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil Nagari</a></li>
+      <li><a href="walinagari.html">Wali Nagari</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const sideMenu = document.getElementById("side-menu");
+
+    toggle.addEventListener("click", () => {
+      sideMenu.classList.toggle("active");
+    });
+  </script>
+
+  <section id="galeri">
+  <h2>Galeri Kegiatan KKN</h2>
+  <div class="galeri">
+    <img src="assets/kegi1.jpg" alt="Kegiatan 1"/>
+    <img src="assets/kegi2.jpg" alt="Kegiatan 2"/>
+    <img src="assets/kegi3.jpg" alt="Kegiatan 3"/>
+    <img src="assets/kegi4.jpg" alt="Kegiatan 4"/>
+    <img src="assets/kegi5.jpg" alt="Kegiatan 5"/>
+    <img src="assets/kegi6.jpg" alt="Kegiatan 6"/>
+  </div>
+  <p>Video dokumentasi tersedia di <a href="https://youtube.com" target="_blank">YouTube KKN</a>.</p>
+</section>
+
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tim KKN Nagari Sikabu - Universitas Negeri Padang</p>
+  </footer>
+
+</body>
+
+
+  

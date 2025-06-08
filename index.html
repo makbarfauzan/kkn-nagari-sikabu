@@ -1,0 +1,73 @@
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda - Nagari Sikabu</title>
+  <link rel="icon" href="assets/logo2.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Logo di atas navigasi -->
+  <div class="logo-atas">
+    <img src="assets/logo1.jpg" alt="Logo KKN Nagari Sikabu" />
+  </div>
+
+    <!-- Header untuk HP -->
+  <header class="mobile-header">
+    <button id="menu-toggle" class="hamburger">&#9776;</button>
+    <span class="menu-label">Menu</span>
+  </header>
+
+
+  <!-- Menu samping untuk HP -->
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil Nagari</a></li>
+      <li><a href="walinagari.html">Wali Nagari</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu horizontal biasa untuk desktop -->
+<nav class="desktop-nav">
+  <div class="nav-container">
+    <div class="brand">Nagari Sikabu</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil Nagari</a></li>
+      <li><a href="walinagari.html">Wali Nagari</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const sideMenu = document.getElementById("side-menu");
+
+    toggle.addEventListener("click", () => {
+      sideMenu.classList.toggle("active");
+    });
+  </script>
+
+  <!-- Sama seperti sebelumnya tapi bagian utama hanya sambutan -->
+  <section id="beranda">
+    <h2>Selamat Datang</h2>
+    <p>Selamat datang di website resmi Nagari Sikabu, Lubuk Alung. Situs ini dikelola oleh Tim KKN UNP 2025 untuk menyampaikan informasi penting dan dokumentasi kegiatan selama program berlangsung.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      
+    </p>
+  </section>
+
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tim KKN Nagari Sikabu - Universitas Negeri Padang</p>
+  </footer>
+
+  
+</body>
+

@@ -1,0 +1,522 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4cb;
+  color: #333;
+  padding: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Header mobile */
+.mobile-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #1DAB9D;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.menu-label {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Side menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background-color: #1DAB9D;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 12px 20px;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+.side-menu a:hover {
+  background-color: #0f887e;
+  border-radius: 5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Konten utama */
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Responsive opsional */
+@media (min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  nav.desktop-nav {
+    display: block;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Navigasi biasa (desktop) */
+.desktop-nav {
+  background-color: #1DAB9D;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.desktop-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  display: inline-block;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`Efek modern saat hover */
+.desktop-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Tampilkan hanya menu HP saat layar kecil */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .side-menu {
+    display: block;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Tampilkan hanya menu desktop saat layar besar */
+@media (min-width: 769px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .side-menu {
+    display: none;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Logo di atas navigasi */
+.logo-atas {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.logo-atas img {
+  height: 80px;
+  max-width: 95%;
+  object-fit: contain;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`Bisa ditambah responsive kalau ingin ukuran berbeda */
+@media (max-width: 600px) {
+  .logo-atas img {
+    height: 60px;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~```bagian beranda*/
+#beranda {
+  position: relative; /* penting agar anak position absolute relatif di sini */
+  background: url('assets/bg-nagari.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 60px 20px; /* padding bisa dikurangi karena pakai posisi absolute */
+  border-radius: 8px;
+  min-height: 300px; /* agar tinggi tetap terjaga */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Hilangkan flexbox, gunakan posisi absolute untuk teks */
+.beranda-konten {
+  position: relative; /* sebagai referensi posisi absolut anaknya */
+  height: 100%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Teks di sudut kiri atas */
+.beranda-teks {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 600px;
+  /*background-color: rgba(0, 0, 0, 0.5); /* transparan supaya teks terbaca */
+  padding: 15px 20px;
+  border-radius: 12px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Warna judul Selamat Datang*/
+.beranda-teks h2 {
+  color: #1DAB9D;
+  margin-bottom: 10px;
+}
+
+.beranda-teks p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Kontainer wali nagari */
+.wali-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Untuk layout horizontal di layar besar */
+@media (min-width: 768px) {
+  .wali-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Gambar wali nagari */
+.foto-profil {
+  width: 180px;
+  height: auto;
+  border-radius: 20px; /* sisi bundar */
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Teks wali */
+.wali-info {
+  text-align: left;
+}
+
+.wali-info p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.wali-info .deskripsi {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+#pemerintahan h2 {
+  text-align: center;
+  color: #333; /* warna hijau sebagai contoh, bisa disesuaikan */
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~video dokimentasi*/
+.video-dokumentasi {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;         /* Default max-width */
+  margin: 20px auto;
+  padding-bottom: 56.25%;    /* Rasio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-dokumentasi iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Ukuran dan tinggi di laptop */
+@media (min-width: 1024px) {
+  .video-dokumentasi {
+    max-width: 799px;      /* Lebar */
+    padding-bottom: 38%;   /* Tinggi lebih rendah (atau ganti sesuai kebutuhan) */
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Container galeri */
+.galeri {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Gambar dalam galeri */
+.galeri img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* sisi bundar */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.galeri img:hover {
+  transform: scale(1.03);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Atur untuk laptop/tablet: 3 kolom */
+@media (min-width: 768px) {
+  .galeri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Kontainer untuk section kontak */
+#kontak {
+  max-width: auto;
+  margin: 0 auto; /* Tengah secara horizontal */
+  padding: 20px;
+  text-align: center;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Gaya teks */
+#kontak p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`Judul tiap kegiatan */
+.judul-kegiatan {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.25rem;
+  color: #1DAB9D;
+  font-weight: bold;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`Judul utama galeri */
+#galeri h2 {
+  text-align: center;
+  color: #333; /* hijau seragam dengan .judul-kegiatan */
+  margin-top: 30px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Responsive iframe (peta) */
+#kontak iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Desktop menu wrapper */
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: block;
+    background-color: #1DAB9D;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .desktop-nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-nav .brand {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .desktop-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  .desktop-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .desktop-nav ul li a:hover {
+    color: black;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~footer*/
+footer {
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #1DAB9D;
+  color: white;
+  border-radius: 8px;
+  margin: 30px auto 20px auto;
+  max-width: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.side-menu {
+  display: none; /* atau transform: translateX(-100%); */
+  /* ... styling lainnya */
+}
+
+.side-menu.active {
+  display: block; /* atau transform: translateX(0); */
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`Profil Nagari*/
+#profil {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  max-width: auto;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#profil h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#profil h3 {
+  color: #1d8f6e;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+#profil p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+#profil ul {
+  list-style: inside square;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+#profil iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsif untuk tablet dan HP */
+@media (max-width: 768px) {
+  #profil {
+    padding: 30px 15px;
+  }
+
+  #profil h2 {
+    font-size: 1.5rem;
+  }
+
+  #profil h3 {
+    font-size: 1.1rem;
+  }
+
+  #profil p {
+    font-size: 0.95rem;
+  }
+
+  #profil iframe {
+    height: 250px;
+  }
+}

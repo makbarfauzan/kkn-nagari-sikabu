@@ -1,0 +1,140 @@
+
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Nagari - Nagari Sikabu</title>
+  <link rel="icon" href="assets/logo2.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Logo di atas navigasi -->
+  <div class="logo-atas">
+    <img src="assets/logo1.jpg" alt="Logo KKN Nagari Sikabu" />
+  </div>
+
+    <!-- Header untuk HP -->
+  <header class="mobile-header">
+    <button id="menu-toggle" class="hamburger">&#9776;</button>
+    <span class="menu-label">Menu</span>
+  </header>
+
+  <!-- Menu samping untuk HP -->
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil Nagari</a></li>
+      <li><a href="walinagari.html">Wali Nagari</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu horizontal biasa untuk desktop -->
+<nav class="desktop-nav">
+  <div class="nav-container">
+    <div class="brand">Nagari Sikabu</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil Nagari</a></li>
+      <li><a href="walinagari.html">Wali Nagari</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <script>
+  const toggle = document.getElementById("menu-toggle");
+  const sideMenu = document.getElementById("side-menu");
+
+  // Toggle menu saat tombol hamburger diklik
+  toggle.addEventListener("click", () => {
+    sideMenu.classList.toggle("active");
+
+    // Tambah history state agar tombol back bisa deteksi
+    if (sideMenu.classList.contains("active")) {
+      history.pushState({ menuOpen: true }, ""); // Tambahkan state history
+    }
+  });
+
+  // Tutup menu saat klik di luar sideMenu dan toggle button
+  document.addEventListener("click", (e) => {
+    if (
+      sideMenu.classList.contains("active") &&
+      !sideMenu.contains(e.target) &&
+      !toggle.contains(e.target)
+    ) {
+      sideMenu.classList.remove("active");
+      if (history.state?.menuOpen) {
+        history.back(); // Kembali ke state sebelumnya
+      }
+    }
+  });
+
+  // Deteksi tombol back
+  window.addEventListener("popstate", (e) => {
+    if (sideMenu.classList.contains("active")) {
+      sideMenu.classList.remove("active");
+    }
+  });
+  
+</script>
+
+  <section id="profil">
+  <h2>Profil Nagari</h2>
+  
+  <!-- Deskripsi Umum -->
+  <p>
+    Nagari Sikabu merupakan salah satu nagari yang berada di Kecamatan Lubuk Alung, Kabupaten Padang Pariaman, Sumatera Barat. Nagari ini memiliki luas wilayah sekitar ... hektar dan terdiri dari beberapa jorong (dusun).
+  </p>
+
+  <!-- Sejarah Singkat -->
+  <h3>Sejarah Singkat</h3>
+  <p>
+    Nagari Sikabu memiliki sejarah panjang sebagai bagian dari peradaban Minangkabau. Dahulu, daerah ini menjadi jalur perdagangan lokal dan memiliki nilai budaya yang kuat hingga kini.
+  </p>
+
+  <!-- Batas Wilayah -->
+  <h3>Batas Wilayah</h3>
+  <ul>
+    <li>Sebelah Utara: Nagari A</li>
+    <li>Sebelah Selatan: Nagari B</li>
+    <li>Sebelah Timur: Nagari C</li>
+    <li>Sebelah Barat: Nagari D</li>
+  </ul>
+
+  <!-- Jumlah Penduduk -->
+  <h3>Jumlah Penduduk</h3>
+  <p>
+    Berdasarkan data terakhir, jumlah penduduk Nagari Sikabu mencapai sekitar ... jiwa, dengan komposisi mata pencaharian sebagian besar sebagai petani, pedagang, dan pegawai negeri.
+  </p>
+
+  <!-- Potensi Nagari -->
+  <h3>Potensi dan Keunggulan</h3>
+  <ul>
+    <li>Potensi pertanian: padi, sayuran, dan palawija</li>
+    <li>Kerajinan tangan tradisional</li>
+    <li>Pariwisata: keindahan alam dan situs budaya</li>
+    <li>Kegiatan pemuda dan UMKM berkembang pesat</li>
+  </ul>
+
+  <!-- Peta Wilayah -->
+  <h3>Peta Wilayah</h3>
+  <p>
+    Berikut adalah peta wilayah Nagari Sikabu:
+  </p>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180545.70896330517!2d100.2351277166704!3d-0.6837503563475801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4dbf4b4456791%3A0x5f5a8b85ed8ec1b!2sLubuk%20Alung%2C%20Kec.%20Lubuk%20Alung%2C%20Kabupaten%20Padang%20Pariaman%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1749374840153!5m2!1sid!2sid"
+    width="100%" height="300" style="border:0;" 
+    allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tim KKN Nagari Sikabu - Universitas Negeri Padang</p>
+  </footer>
+
+</body>
+

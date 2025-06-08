@@ -1,0 +1,71 @@
+
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak - Nagari Sikabu</title>
+  <link rel="icon" href="assets/logo2.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Logo di atas navigasi -->
+  <div class="logo-atas">
+    <img src="assets/logo1.jpg" alt="Logo KKN Nagari Sikabu" />
+  </div>
+
+    <!-- Header untuk HP -->
+  <header class="mobile-header">
+    <button id="menu-toggle" class="hamburger">&#9776;</button>
+    <span class="menu-label">Menu</span>
+  </header>
+
+  <!-- Menu samping untuk HP -->
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil Nagari</a></li>
+      <li><a href="walinagari.html">Wali Nagari</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu horizontal biasa untuk desktop -->
+<nav class="desktop-nav">
+  <div class="nav-container">
+    <div class="brand">Nagari Sikabu</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil Nagari</a></li>
+      <li><a href="walinagari.html">Wali Nagari</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const sideMenu = document.getElementById("side-menu");
+
+    toggle.addEventListener("click", () => {
+      sideMenu.classList.toggle("active");
+    });
+  </script>
+
+  <section id="kontak">
+  <h2>Kontak & Lokasi</h2>
+  <p>Email: nagarisikabu@gmail.com</p>
+  <p>Instagram: @kkn_nagarisikabu</p>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d361095.1032327236!2d100.16826467578872!3d-0.6328578611621876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4dc4c695f9b55%3A0x2edbc06c4a3b1c64!2sKantor%20Wali%20Nagari%20SIkabu!5e0!3m2!1sid!2sid!4v1749220812326!5m2!1sid!2sid 
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tim KKN Nagari Sikabu - Universitas Negeri Padang</p>
+  </footer>
+
+</body>
+
